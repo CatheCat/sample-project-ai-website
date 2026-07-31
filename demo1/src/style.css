@@ -1,0 +1,31 @@
+/* ERP Global Styles
+ * font.family.primary: IBM Plex Sans + Noto Sans TC  (spec Style.md §1.2)
+ * color.bg.canvas: #F5F7FA                           (spec Style.md §1.1)
+ */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg-canvas: #F5F7FA;
+  --color-bg-surface: #FFFFFF;
+  --color-text-primary: #1F2937;
+  --color-border-default: #D1D9E6;
+}
+
+html, body, #app { height: 100%; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IBM Plex Sans', 'Noto Sans TC', sans-serif;
+  background: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+}
+
+.drawer-brand {
+  border-bottom: 1px solid var(--color-border-default);
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.erp-main    { background: var(--color-bg-canvas); }
+.erp-topbar  { background: var(--color-bg-surface) !important; }
