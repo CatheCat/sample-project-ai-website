@@ -2,6 +2,21 @@
 
 All notable changes to this design spec system are documented in this file.
 
+## [1.0.2] - 2026-07-31
+### Added
+- Section-level Chinese explanation lines under each numbered heading in core spec files.
+
+### Notes
+- English keys and rule statements remain unchanged to preserve AI parsing stability.
+
+## [1.0.1] - 2026-07-31
+### Added
+- Chinese quick-guide sections across all spec files while preserving English schema keys.
+- Bilingual intent notes to improve readability for mixed-language teams.
+
+### Notes
+- English field names and token keys remain unchanged for AI parsing stability.
+
 ## [1.0.0] - 2026-07-31
 ### Added
 - Main spec entry with file loading order and override priority.

@@ -3,7 +3,10 @@
 Version: 1.0.0
 Intent: Define visual language, design tokens, and component-level style decisions.
 
+中文說明: 本檔定義視覺 Token 與元件風格，欄位鍵名請維持英文以利 AI 穩定解析。
+
 ## 1) Global Defaults
+中文說明: 定義全站共用的視覺基準值，包含色彩、字體、間距、陰影與動效。
 
 ### 1.1 Color Tokens
 - color.primary: #145A7A
@@ -70,6 +73,7 @@ Intent: Define visual language, design tokens, and component-level style decisio
 - motion.level.default: low
 
 ## 2) Component Styling Rules
+中文說明: 定義常見元件的視覺行為，避免同一類元件在不同頁面長得不一樣。
 - Buttons: solid primary for main action, outline for secondary, danger only for destructive.
 - Inputs: clear border contrast, 40px min height desktop, 44px min touch target on mobile.
 - Cards: use surface background, subtle border, md radius, sm shadow.
@@ -77,6 +81,7 @@ Intent: Define visual language, design tokens, and component-level style decisio
 - Tags/Badges: semantic colors only, avoid random decorative colors.
 
 ## 3) Customizable Fields
+中文說明: 列出允許覆寫的欄位與可用範圍，避免自由改值破壞整體一致性。
 Allowed override fields:
 - color.primary, color.secondary, color.accent
 - font.family.primary
@@ -90,18 +95,28 @@ Validation:
 - Motion level medium cannot be used with high-density compact mode.
 
 ## 4) Impact Notes
+中文說明: 說明每個常見覆寫會影響哪些區塊，方便預估改動範圍。
 - Changing primary color affects buttons, links, active navigation, focus rings.
 - Changing density mode affects paddings, table row height, form spacing.
 - Changing font family affects baseline rhythm and may require heading line-height review.
 
 ## 5) Anti-Patterns
+中文說明: 定義視覺反模式，提醒生成結果不可踩到的設計地雷。
 - Do not mix more than 1 accent color in the same page.
 - Do not use gradient text for data values.
 - Do not use pure black (#000000) as default body text.
 - Do not use very light gray for critical data labels.
 
 ## 6) Customization How-To
+中文說明: 提供執行順序，教你如何安全覆寫並完成生成前檢查。
 1. Copy the project override block from Main.md.
 2. Replace only allowed fields.
 3. Recompute final tokens before generating components.
 4. Run contrast check for text and actionable controls.
+
+## 中文快速導讀
+- 色彩: 先用 color.primary、color.secondary、color.accent 三主軸，避免額外自創主題色。
+- 字體: ERP 預設採可讀性優先，中文與英文字體已同時考量。
+- 密度: compact 偏資料密集，balanced 為預設，comfortable 偏易讀。
+- 動效: 預設 low；若資料密度高，不建議調到 medium。
+- 覆寫建議: 只改允許欄位，改完先做對比檢查再生成 UI。
