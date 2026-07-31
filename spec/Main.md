@@ -26,20 +26,22 @@ The AI generator must load the following files:
 4. ./RWD.md
 5. ./Dos-Donts.md
 6. ./ERP-Defaults.md
-7. ./Generation-Checklist.md
-8. ./CHANGELOG.md
+7. ./Technology-Stack.md
+8. ./Generation-Checklist.md
+9. ./CHANGELOG.md
 
 ## 3) Reading Order And Override Priority
 中文說明: 定義讀檔順序與覆寫優先權，確保多份規則衝突時有一致解法。
 Read order:
 1. Main.md
 2. ERP-Defaults.md
-3. Style.md
-4. Layout.md
-5. Menu-Navigation.md
-6. RWD.md
-7. Dos-Donts.md
-8. Generation-Checklist.md
+3. Technology-Stack.md
+4. Style.md
+5. Layout.md
+6. Menu-Navigation.md
+7. RWD.md
+8. Dos-Donts.md
+9. Generation-Checklist.md
 
 Override priority (high to low):
 1. Page override
@@ -79,6 +81,11 @@ language_mode: zh-TW + en
 layout_max_width: 1440
 border_radius_scale: compact
 motion_level: low
+frontend.framework: vue
+ui.component_package: vuetify
+testing.required: true
+testing.scope.minimum: unit+integration
+coverage.target.lines: 70
 ```
 
 Rules:
@@ -92,10 +99,11 @@ Rules:
 For each generated project, AI must output:
 1. Design Summary (theme, density, nav behavior, responsiveness strategy)
 2. Token Table (resolved final values after overrides)
-3. Page Blueprints
-4. Component Rules
-5. Accessibility Notes
-6. Risk List (if any unresolved conflicts)
+3. Technical Stack Summary (framework, component package, testing stack)
+4. Page Blueprints
+5. Component Rules
+6. Accessibility Notes
+7. Risk List (if any unresolved conflicts)
 
 ## 7) Standard Page Blueprints
 中文說明: 定義 ERP 最低必備頁型，確保核心流程不缺頁。
@@ -142,6 +150,7 @@ Output must include:
 - 目的: 統一定義 AI 生成 ERP 網站時的讀檔流程、覆寫規則與交付格式。
 - 設計系統: 預設使用 Google Material Design（Material 3）。
 - 讀檔順序: 先 Main，再 ERP 預設，最後依 Style/Layout/Menu/RWD/Do-Don't/Checklist。
+- 技術選型: 由 Technology-Stack.md 定義 framework、元件套件與測試策略。
 - 覆寫優先序: 頁面覆寫 > 專案覆寫 > ERP 預設 > 各檔全域預設。
 - 專案啟動方式: 填寫 Project Overrides，僅修改允許欄位，未填則回退預設。
 - 驗收門檻: 必須通過 Checklist，且不得違反 Do/Don't 的高嚴重度規則。

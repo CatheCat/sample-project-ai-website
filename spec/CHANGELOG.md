@@ -2,6 +2,26 @@
 
 All notable changes to this design spec system are documented in this file.
 
+## [1.0.5] - 2026-07-31
+### Changed
+- Switched default framework from React to Vue.
+- Updated default UI component package from MUI to Vuetify.
+
+### Notes
+- Default stack is now Vue + Vuetify + required tests (unit+integration).
+- React + MUI profile is still supported via overrides.
+
+## [1.0.4] - 2026-07-31
+### Added
+- New Technology-Stack spec file to define framework options (React/Vue), component packages, and testing policy.
+- Main spec updated to require and load Technology-Stack.md in generation order.
+- Generation checklist updated with engineering stack checks.
+- ERP defaults updated with framework/component/testing defaults.
+
+### Notes
+- Default stack is React + MUI + required tests (unit+integration).
+- Vue profile is available with Vuetify while keeping Material-compatible design language.
+
 ## [1.0.3] - 2026-07-31
 ### Added
 - Set Google Material Design (Material 3) as the default design system in Main, Style, and ERP defaults.

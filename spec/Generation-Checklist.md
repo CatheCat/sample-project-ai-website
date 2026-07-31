@@ -8,6 +8,7 @@ Intent: Validate AI output quality before implementation starts.
 ## 1) Pre-Generation Checks
 中文說明: 生成前先檢查輸入條件是否完整且合法，避免錯誤一路帶進輸出。
 - Main.md and all required files are present.
+- Technology-Stack.md is loaded and resolved.
 - Project Overrides block is complete and valid.
 - No unknown override fields.
 - Override conflicts resolved by priority rules.
@@ -58,6 +59,14 @@ All sections pass:
 - PASS: proceed to implementation.
 - FAIL: revise overrides/spec and regenerate.
 
+## 10) Engineering Stack Checks
+中文說明: 檢查技術選型是否符合規格，避免產出與既定框架或測試策略不一致。
+- Framework profile is explicitly selected (react or vue).
+- Primary UI component package matches selected framework.
+- Testing policy is declared (`testing.required` true/false) with rationale if false.
+- Minimum test scope and coverage target are defined.
+- Setup/test/build commands are included in output.
+
 ## 9) Customization How-To
 中文說明: 說明如何擴充專案檢核項，且必須能回溯到對應規格來源。
 1. Add project-specific checks under the same section structure.
@@ -70,3 +79,4 @@ All sections pass:
 - 響應式: 三裝置行為、表單與表格策略、觸控尺寸都要有定義。
 - 可用性: 對比、鍵盤導覽、loading/empty/error 狀態需完整。
 - 放行條件: 全部 PASS 才可進入開發。
+- 技術檢核: Framework、元件套件、測試策略與指令需完整定義。
