@@ -5,6 +5,12 @@ Intent: Define visual language, design tokens, and component-level style decisio
 
 中文說明: 本檔定義視覺 Token 與元件風格，欄位鍵名請維持英文以利 AI 穩定解析。
 
+## 0) Design System Baseline
+中文說明: 定義預設設計系統，所有元件與互動樣式需優先遵循此基準。
+- design_system.default: material-3
+- design_system.source: Google Material Design
+- component_style.priority: material-first
+
 ## 1) Global Defaults
 中文說明: 定義全站共用的視覺基準值，包含色彩、字體、間距、陰影與動效。
 
@@ -74,15 +80,16 @@ Intent: Define visual language, design tokens, and component-level style decisio
 
 ## 2) Component Styling Rules
 中文說明: 定義常見元件的視覺行為，避免同一類元件在不同頁面長得不一樣。
-- Buttons: solid primary for main action, outline for secondary, danger only for destructive.
+- Buttons: use Material button variants (filled/outlined/text), danger only for destructive.
 - Inputs: clear border contrast, 40px min height desktop, 44px min touch target on mobile.
-- Cards: use surface background, subtle border, md radius, sm shadow.
+- Cards: use Material surface and elevation levels for hierarchy.
 - Tables: zebra optional, header sticky allowed, row hover must keep text contrast.
 - Tags/Badges: semantic colors only, avoid random decorative colors.
 
 ## 3) Customizable Fields
 中文說明: 列出允許覆寫的欄位與可用範圍，避免自由改值破壞整體一致性。
 Allowed override fields:
+- design_system: material-3 | material-2
 - color.primary, color.secondary, color.accent
 - font.family.primary
 - density_mode: compact | balanced | comfortable
@@ -106,6 +113,7 @@ Validation:
 - Do not use gradient text for data values.
 - Do not use pure black (#000000) as default body text.
 - Do not use very light gray for critical data labels.
+- Do not mix Material and non-Material component styles in the same page.
 
 ## 6) Customization How-To
 中文說明: 提供執行順序，教你如何安全覆寫並完成生成前檢查。
@@ -116,6 +124,7 @@ Validation:
 
 ## 中文快速導讀
 - 色彩: 先用 color.primary、color.secondary、color.accent 三主軸，避免額外自創主題色。
+- 設計系統: 預設為 Material 3，優先沿用其元件語彙與層級規則。
 - 字體: ERP 預設採可讀性優先，中文與英文字體已同時考量。
 - 密度: compact 偏資料密集，balanced 為預設，comfortable 偏易讀。
 - 動效: 預設 low；若資料密度高，不建議調到 medium。

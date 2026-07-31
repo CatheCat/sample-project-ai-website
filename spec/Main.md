@@ -15,6 +15,7 @@ Goals:
 - Keep visual and interaction consistency across projects.
 - Allow controlled customization without breaking the system.
 - Ensure desktop-first ERP usability while remaining fully responsive.
+- Use Google Material Design (Material 3) as the default UI design system.
 
 ## 2) Required File Set
 中文說明: 列出 AI 生成前必讀檔案，避免漏讀造成規格不一致。
@@ -68,6 +69,7 @@ When starting a new project, provide one override block in plain Markdown:
 ## Project Overrides
 project_name: ACME ERP
 brand_tone: calm-professional | practical | data-driven
+design_system: material-3
 primary_color: #145A7A
 secondary_color: #2B7A78
 accent_color: #E8A317
@@ -83,6 +85,7 @@ Rules:
 - Override only listed customizable fields.
 - Unknown fields must be ignored.
 - Missing fields fall back to defaults.
+- `design_system` default is `material-3` if not provided.
 
 ## 6) AI Output Requirements
 中文說明: 規定 AI 產出最少要交付哪些內容，避免只生成畫面而缺少可落地規格。
@@ -137,6 +140,7 @@ Output must include:
 
 ## 中文快速導讀
 - 目的: 統一定義 AI 生成 ERP 網站時的讀檔流程、覆寫規則與交付格式。
+- 設計系統: 預設使用 Google Material Design（Material 3）。
 - 讀檔順序: 先 Main，再 ERP 預設，最後依 Style/Layout/Menu/RWD/Do-Don't/Checklist。
 - 覆寫優先序: 頁面覆寫 > 專案覆寫 > ERP 預設 > 各檔全域預設。
 - 專案啟動方式: 填寫 Project Overrides，僅修改允許欄位，未填則回退預設。

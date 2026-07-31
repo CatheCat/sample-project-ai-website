@@ -15,6 +15,8 @@ Intent: Validate AI output quality before implementation starts.
 ## 2) Design Consistency Checks
 中文說明: 檢查視覺規則是否前後一致，避免同專案出現多套風格。
 - Final token table is produced.
+- Default design system is Material 3 unless explicitly overridden.
+- Core components follow Material variants and elevation logic.
 - Typography scale is consistent across all page blueprints.
 - Status colors are semantically consistent.
 - Primary/secondary action pattern is consistent.

@@ -2,6 +2,14 @@
 
 All notable changes to this design spec system are documented in this file.
 
+## [1.0.3] - 2026-07-31
+### Added
+- Set Google Material Design (Material 3) as the default design system in Main, Style, and ERP defaults.
+- Added checklist validations to ensure generated UI follows Material component and elevation rules.
+
+### Notes
+- Design system remains overrideable via `design_system`, with `material-3` as default.
+
 ## [1.0.2] - 2026-07-31
 ### Added
 - Section-level Chinese explanation lines under each numbered heading in core spec files.

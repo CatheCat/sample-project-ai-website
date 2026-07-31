@@ -13,6 +13,7 @@ Intent: Provide pragmatic defaults tuned for internal administrative ERP systems
 
 ## 2) Default Theme Pack
 中文說明: 定義 ERP 預設主題組合，讓專案可在低覆寫成本下快速啟動。
+- design_system: material-3
 - density_mode: balanced
 - navigation.mode.default: sidebar
 - navigation.mobile.pattern: tab-drawer
@@ -53,6 +54,7 @@ Intent: Provide pragmatic defaults tuned for internal administrative ERP systems
 
 ## 7) Customizable Fields
 中文說明: 列出可依專案情境調整的 ERP 欄位，不在清單內則維持預設。
+- design_system
 - density_mode
 - navigation.mode.default
 - layout.max_width
