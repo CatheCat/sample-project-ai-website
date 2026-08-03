@@ -1,0 +1,51 @@
+/*
+ * demo2 — Sales / CRM ERP
+ * Project Overrides (spec Main.md §5):
+ *   primary_color:      #4338CA  (deep indigo)
+ *   secondary_color:    #7C3AED  (violet)
+ *   accent_color:       #F59E0B  (amber)
+ *   density_mode:       comfortable
+ *   border_radius_scale: balanced
+ *   font.family.primary: Inter, Noto Sans TC, sans-serif
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg-canvas:   #F4F5FB;
+  --color-bg-surface:  #FFFFFF;
+  --color-border:      #E0E2F0;
+  --color-text:        #1E1B4B;
+  --shadow-card:       0 2px 8px rgba(67, 56, 202, 0.08);
+}
+
+html, body, #app { height: 100%; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  background: var(--color-bg-canvas);
+  color: var(--color-text);
+}
+
+/* Sidebar brand area */
+.drawer-brand {
+  border-bottom: 1px solid var(--color-border);
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #4338CA 0%, #7C3AED 100%);
+}
+
+.erp-main   { background: var(--color-bg-canvas); }
+.erp-topbar { background: var(--color-bg-surface) !important; }
+
+/* Pipeline stage badge */
+.stage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
